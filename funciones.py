@@ -104,7 +104,7 @@ def crear(nombrefinal):
 
 
 # Funcion de agregar tablas al principio 
-def agregar(nombrebase,final):
+def agregar(nombrefinal,final):
     try:
         with sqlite3.connect(nombrefinal) as conn:
             cursor_mini = conn.cursor()

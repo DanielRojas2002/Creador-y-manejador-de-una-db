@@ -94,9 +94,8 @@ while opcion==1:
                 print("1=SI\n2=NO")
                 opcion=int(input("Deseas seguir ejecutando el codigo creador de Base de Datos ? : "))
                 print("")
-        #_________________________________________________________________________________________________________________________________________________
          
-        #Si no tengo una base de datos creada por el cicio
+          #Si no tengo una base de datos creada por el cicio
         elif contador==0:
             print("No has registrado ninguna Base de Datos en el Ciclo :(")
             print("Ingresa bien el nombre de la base de datos porque si no lo ingresas bien te va a crear una nueva con el nombre que le des :)")
