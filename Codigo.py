@@ -26,6 +26,7 @@ while opcion==1:
 
        # Crear base de datos        
     if menu==1:
+        print(separador)
         nombre=(input("Dime como quieres que se llame tu Base de Datos : "))
         nombrefinal=(nombre + ".db")
         listabase.append(nombrefinal)
@@ -157,6 +158,7 @@ while opcion==1:
                 print("")
                 
     elif menu == 3:
+        listadatos=[]
         contador10=1
         contador11=0
         listatipo=[]
@@ -166,18 +168,18 @@ while opcion==1:
         print(separador)
         tabla=input("Dime el nombre de la Tabla : ")
         print(separador)
-        cuantos=int(input("Cuantos campos tienes en esta tabla :"))
+        cuantos=int(input("Cuantos atributos tienes en esta tabla :"))
         print(separador)
         tipos(separador)
 
         for x in range(cuantos):
-            dato=input(f"Dime el nombre del valor {contador10} : ")
+            dato=input(f"Dime el nombre del atributo {contador10} : ")
             contador10=contador10+1
             print(separador)
             listadatos.append(dato)
 
         for x in range (cuantos):
-            tipo=input(f"Dime que tipo de dato es el valor {listadatos[contador11]} de esta tabla : ")
+            tipo=input(f"Dime que tipo de dato es, el atributo {listadatos[contador11]} de esta tabla : ")
             contador2=contador2+1
             contador11=contador11+1
             print(separador)
