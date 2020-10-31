@@ -1,3 +1,9 @@
+import sys
+import sqlite3
+from sqlite3 import Error
+from plyer import notification
+
+
 def tipos(separador):
     print(separador)
     print("Tipos de Datos: ")
