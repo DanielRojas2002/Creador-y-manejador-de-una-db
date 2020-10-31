@@ -50,6 +50,7 @@ while opcion==1:
             parentesis2=(")")
             puntoycoma=(";")
             nombrebase=input("Dime el nombre de la Base de Datos : ")
+            nombrefinal=(nombrebase +".db")
             print(separador)
             tabla=input("Dime el nombre de la Tabla a crear : ")
             print("")
