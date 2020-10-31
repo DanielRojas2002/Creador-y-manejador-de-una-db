@@ -32,3 +32,125 @@ while opcion==1:
         crear(nombrefinal)
         print("1=SI\n2=NO")
         opcion=int(input("Deseas seguir ejecutando el codigo creador de Base de Datos ? : "))
+    
+
+    #Agregar tablas a la base de datos ya creada ("EL ESQUELETO ")
+    if menu ==2:
+        print(separador)
+        for base in listabase :
+            print(f"Estas son las Base de Datos que ya estan creadas : {base} \n")
+            contador=contador+1
+        
+        #Si tengo una base de datos ya creada con el ciclo
+        if contador!=0:
+            print(separador)
+            agre=("CREATE TABLE IF NOT EXISTS ")
+            parentesis=("(")
+            parentesis2=(")")
+            puntoycoma=(";")
+            nombrebase=input("Dime el nombre de la Base de Datos : ")
+            print(separador)
+            tabla=input("Dime el nombre de la Tabla a crear : ")
+            print("")
+            tipos(separador)
+            print("")
+            clave=input("Dime el nombre del atributo clave con su tipo de dato  : ")
+            print(separador)
+            cuantos=int(input("Dime cuantos atributos va a tener : "))
+            print(separador)
+            fin=(agre+tabla+parentesis+clave+" PRIMARY KEY"+",")
+            
+            # 1 ATRIBUTO
+            if cuantos==1:
+                tipos(separador)
+                atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar: ")
+                listaatributos.append(atributo)
+                caracter="".join(listaatributos)
+                final =(fin+caracter+parentesis2+puntoycoma)
+                agregar(nombrefinal,final)
+                print("1=SI\n2=NO")
+                opcion=int(input("Deseas seguir ejecutando el codigo creador de Base de Datos ? : "))
+                print("")
+                
+            # MAS DE 1 ATRIBUTO
+            elif cuantos>1:
+                tipos(separador)
+                print("")
+            
+                for x in range(1,cuantos+1):
+                    if x != cuantos:
+                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar y al final pon una coma  : ")
+                        listaatributos.append(atributo)
+            
+                    else:
+                        print(separador)
+                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar sin coma al final :)  : ")
+                        listaatributos.append(atributo)
+
+                caracter="".join(listaatributos)
+                final =(fin+caracter+parentesis2+puntoycoma)
+                agregar(nombrefinal,final)
+                print("1=SI\n2=NO")
+                opcion=int(input("Deseas seguir ejecutando el codigo creador de Base de Datos ? : "))
+                print("")
+        #_________________________________________________________________________________________________________________________________________________
+         
+        #Si no tengo una base de datos creada por el cicio
+        elif contador==0:
+            print("No has registrado ninguna Base de Datos en el Ciclo :(")
+            print("Ingresa bien el nombre de la base de datos porque si no lo ingresas bien te va a crear una nueva con el nombre que le des :)")
+            
+            print(separador)
+            agre=("CREATE TABLE IF NOT EXISTS ")
+            parentesis=("(")
+            parentesis2=(")")
+            puntoycoma=(";")
+            nombrebase=input("Dime el nombre de la Base de Datos : ")
+            nombrefinal=(nombrebase+".db")
+            print(separador)
+            tabla=input("Dime el nombre de la Tabla a crear : ")
+            print("")
+            tipos(separador)
+            print("")
+            clave=input("Dime el nombre del atributo clave con su tipo de dato  : ")
+            print(separador)
+            cuantos=int(input("Dime cuantos atributos va a tener : "))
+            print(separador)
+            fin=(agre+tabla+parentesis+clave+" PRIMARY KEY"+",")
+          
+            # 1 ATRIBUTO
+            if cuantos==1:
+                print("")
+                tipos(separador)
+                print("")
+                atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar: ")
+                listaatributos.append(atributo)
+                caracter="".join(listaatributos)
+                final =(fin+caracter+parentesis2+puntoycoma)
+                agregar(nombrefinal,final)
+                print("1=SI\n2=NO")
+                opcion=int(input("Deseas seguir ejecutando el codigo creador de Base de Datos ? : "))
+                print("")
+            
+            # MAS DE 1 ATRIBUTO
+            elif cuantos>1:
+                print("")
+                tipos(separador)
+                print("")
+            
+                for x in range(1,cuantos+1):
+                    if x != cuantos:
+                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar y al final pon una coma  : ")
+                        listaatributos.append(atributo)
+            
+                    else:
+                        print(separador)
+                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar sin coma al final :)  : ")
+                        listaatributos.append(atributo)
+
+                caracter="".join(listaatributos)
+                final =(fin+caracter+parentesis2+puntoycoma)
+                agregar(nombrefinal,final)
+                print("1=SI\n2=NO")
+                opcion=int(input("Deseas seguir ejecutando el codigo creador de Base de Datos ? : "))
+                print("")
