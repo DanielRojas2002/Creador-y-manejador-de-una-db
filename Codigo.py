@@ -24,7 +24,7 @@ while opcion==1:
     print("1=Quiero crear una base de datos nueva\n2=Quiero agregar tablas a mi Base de Datos \n3=Quiero agregarle registros a mi Base de Datos ")
     menu=int(input("Que opcion eliges : "))
 
-    # Crear base de datos        
+       # Crear base de datos        
     if menu==1:
         nombre=(input("Dime como quieres que se llame tu Base de Datos : "))
         nombrefinal=(nombre + ".db")
@@ -32,10 +32,11 @@ while opcion==1:
         crear(nombrefinal)
         print("1=SI\n2=NO")
         opcion=int(input("Deseas seguir ejecutando el codigo creador de Base de Datos ? : "))
+        print("")
     
 
-    #Agregar tablas a la base de datos ya creada ("EL ESQUELETO ")
-    if menu ==2:
+         #Agregar tablas a la base de datos ya creada ("EL ESQUELETO ")
+    elif menu ==2:
         print(separador)
         for base in listabase :
             print(f"Estas son las Base de Datos que ya estan creadas : {base} \n")
@@ -154,3 +155,31 @@ while opcion==1:
                 print("1=SI\n2=NO")
                 opcion=int(input("Deseas seguir ejecutando el codigo creador de Base de Datos ? : "))
                 print("")
+                
+    elif menu == 3:
+        listatipo=[]
+        print(separador)
+        nombrebase=input("Dime el nombre de la Base de Datos : ")
+        nombrebase1=(nombrebase+".db")
+        print(separador)
+        tabla=input("Dime el nombre de la Tabla : ")
+        print(separador)
+        cuantos=int(input("Cuantos campos tienes en esta tabla :"))
+        print(separador)
+        tipos(separador)
+        for x in range (cuantos):
+            tipo=input(f"Dime que tipo de dato es el valor {contador2} de esta tabla : ")
+            contador2=contador2+1
+            print(separador)
+            listatipo.append(tipo)
+        registros=int(input("Cuantos registros quieres resgistrar : "))
+        print(separador)
+        print("")
+        print("-"*30 + "Bienvenido a los Registros :)" + "-"*30)
+        insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros)
+        
+        print("1=SI\n2=NO")
+        opcion=int(input("Deseas seguir ejecutando el codigo creador de Base de Datos ? : "))
+        print("")
+    
+
