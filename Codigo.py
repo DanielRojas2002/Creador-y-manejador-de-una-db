@@ -82,12 +82,12 @@ while opcion==1:
             
                 for x in range(1,cuantos+1):
                     if x != cuantos:
-                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar y al final pon una coma  : ")
-                        listaatributos.append(atributo)
+                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar  : ")
+                        listaatributos.append(atributo +",")
             
                     else:
                         print(separador)
-                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar sin coma al final :)  : ")
+                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar : ")
                         listaatributos.append(atributo)
 
                 caracter="".join(listaatributos)
@@ -142,12 +142,12 @@ while opcion==1:
             
                 for x in range(1,cuantos+1):
                     if x != cuantos:
-                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar y al final pon una coma  : ")
-                        listaatributos.append(atributo)
+                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar : ")
+                        listaatributos.append(atributo + ",")
             
                     else:
                         print(separador)
-                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar sin coma al final :)  : ")
+                        atributo=input("Dime el nombre del atributo y su tipo de dato que va almacenar : ")
                         listaatributos.append(atributo)
 
                 caracter="".join(listaatributos)
