@@ -157,6 +157,8 @@ while opcion==1:
                 print("")
                 
     elif menu == 3:
+        contador10=1
+        contador11=0
         listatipo=[]
         print(separador)
         nombrebase=input("Dime el nombre de la Base de Datos : ")
@@ -167,11 +169,20 @@ while opcion==1:
         cuantos=int(input("Cuantos campos tienes en esta tabla :"))
         print(separador)
         tipos(separador)
+
+        for x in range(cuantos):
+            dato=input(f"Dime el nombre del valor {contador10} : ")
+            contador10=contador10+1
+            print(separador)
+            listadatos.append(dato)
+
         for x in range (cuantos):
-            tipo=input(f"Dime que tipo de dato es el valor {contador2} de esta tabla : ")
+            tipo=input(f"Dime que tipo de dato es el valor {listadatos[contador11]} de esta tabla : ")
             contador2=contador2+1
+            contador11=contador11+1
             print(separador)
             listatipo.append(tipo)
+
         registros=int(input("Cuantos registros quieres resgistrar : "))
         print(separador)
         print("")
