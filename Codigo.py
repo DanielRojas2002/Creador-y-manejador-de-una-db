@@ -57,7 +57,7 @@ while opcion==1:
             print("")
             tipos(separador)
             print("")
-            clave=input("Dime el nombre del atributo clave con su tipo de dato  : ")
+            clave=input("Dime el nombre del atributo clave primario con su tipo de dato  : ")
             print(separador)
             cuantos=int(input("Dime cuantos atributos va a tener : "))
             print(separador)
@@ -114,7 +114,7 @@ while opcion==1:
             print("")
             tipos(separador)
             print("")
-            clave=input("Dime el nombre del atributo clave con su tipo de dato  : ")
+            clave=input("Dime el nombre del atributo clave primario con su tipo de dato  : ")
             print(separador)
             cuantos=int(input("Dime cuantos atributos va a tener : "))
             print(separador)
@@ -168,7 +168,7 @@ while opcion==1:
         print(separador)
         tabla=input("Dime el nombre de la Tabla : ")
         print(separador)
-        cuantos=int(input("Cuantos atributos tienes en esta tabla :"))
+        cuantos=int(input("Cuantos atributos o campos tienes en esta tabla :"))
         print(separador)
         tipos(separador)
 
@@ -179,13 +179,13 @@ while opcion==1:
             listadatos.append(dato)
 
         for x in range (cuantos):
-            tipo=input(f"Dime que tipo de dato es, el atributo {listadatos[contador11]} de esta tabla : ")
+            tipo=input(f"Dime que tipo de dato es, el atributo o campo {listadatos[contador11]} de la tabla {tabla} : ")
             contador2=contador2+1
             contador11=contador11+1
             print(separador)
             listatipo.append(tipo)
 
-        registros=int(input("Cuantos registros quieres resgistrar : "))
+        registros=int(input(f"Cuantos registros quieres resgistrar en la tabla {tabla} : "))
         print(separador)
         print("")
         print("-"*30 + "Bienvenido a los Registros :)" + "-"*30)
