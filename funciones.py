@@ -77,3 +77,21 @@ def insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros):
         print (e)
     except:
         print(f"Se produjo el siguiente error: {sys.exc_info()[0]}")
+
+
+# Funcion de crear Base de Datos
+def crear(nombrefinal):
+    try:
+        with sqlite3.connect(nombrefinal) as conn:
+            print("-"*20)
+            print("Ya esta creada tu base de datos : ) ")
+            print("-"*20)
+            notification.notify(
+            title="NOTIFICACION",
+            message = "Ya esta creada tu base de datos :) ",
+            timeout=15,
+            )
+    except Error as e:
+        print (e)
+    except:
+        print(f"Se produjo el siguiente error: {sys.exc_info()[0]}")
