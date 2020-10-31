@@ -95,3 +95,24 @@ def crear(nombrefinal):
         print (e)
     except:
         print(f"Se produjo el siguiente error: {sys.exc_info()[0]}")
+
+
+# Funcion de agregar tablas al principio 
+def agregar(nombrebase,final):
+    try:
+        with sqlite3.connect(nombrefinal) as conn:
+            cursor_mini = conn.cursor()
+            cursor_mini.execute(final)
+            print("-"*20)
+            print("Se agregaron las tablas exitosamente ")
+            print("-"*20)
+            notification.notify(
+            title="NOTIFICACION",
+            message = "Se agregaron las tablas exitosamente :) ",
+            timeout=15,
+            )
+            
+    except Error as e:
+        print (e)
+    except:
+        print(f"Se produjo el siguiente error: {sys.exc_info()[0]}")
