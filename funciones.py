@@ -75,7 +75,7 @@ def insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros,l
             
             notification.notify(
             title="NOTIFICACION",
-            message = "Ya se registraron los resgistros  :) ",
+            message = "Ya se registraron los registros  :) ",
             timeout=15,
             )
             
