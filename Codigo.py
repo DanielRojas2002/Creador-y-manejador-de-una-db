@@ -15,3 +15,11 @@ opcion=1
 listaatributos=[]
 listabase=[]
 contador=0
+
+#Menu principal
+while opcion==1:
+    print(separador + "Bienvenido al creador de Base de Datos :)"+ separador)
+    print("-"*20+"MENU PRINCIPAL"+"-"*20)
+    print("")
+    print("1=Quiero crear una base de datos nueva\n2=Quiero agregar tablas a mi Base de Datos \n3=Quiero agregarle registros a mi Base de Datos ")
+    menu=int(input("Que opcion eliges : "))
