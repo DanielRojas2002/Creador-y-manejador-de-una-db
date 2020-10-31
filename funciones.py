@@ -7,7 +7,13 @@ from plyer import notification
 def tipos(separador):
     print(separador)
     print("Tipos de Datos: ")
-    print("*text\n*integer")
+    print("*text=tipo texto\n*integer=tipo numerico\n*not null = no permite valores vacios")
+    print("-"*15)
+    print("EJEMPLOS: ")
+    print("matricula integer")
+    print("nombre text")
+    print("telefono integer not null ")
+    print("apellido_paterno text not null")
     print(separador)
 
 
