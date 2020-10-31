@@ -12,7 +12,7 @@ def tipos(separador):
 
 
 # Funcion de insertar 
-def insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros):
+def insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros,listadatos):
     try:
         with sqlite3.connect(nombrebase1) as conn:
             cursor_mini = conn.cursor()
@@ -28,12 +28,12 @@ def insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros):
                 listainsertar=[]
                 print("")
                 print("-"*20+f"REGISTRO{contador7}:"+"-"*20)
-                contador3=1
+                contador3=0
                 contador5=1
                 for elemento in listatipo:
                     if cuantos!=contador5:
                         if elemento=="text":
-                            valor=input(f"Dime el valor {contador3} de esta tabla : ")
+                            valor=input(f"Dime el valor de {listadatos[contador3]} en esta tabla : ")
                             print(separador)
                             valorfin=("'"+valor+"'"+",")
                             listainsertar.append(valorfin)
@@ -41,7 +41,7 @@ def insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros):
                             contador5=contador5+1
                             
                         elif elemento=="integer":
-                            valor=input(f"Dime el valor {contador3} de esta tabla  : ")
+                            valor=input(f"Dime el valor de {listadatos[contador3]} en esta tabla : ")
                             print(separador)
                             listainsertar.append(valor+",")
                             contador3=contador3+1
@@ -49,7 +49,7 @@ def insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros):
                         
                     elif elemento==listatipo[-1]:
                         if elemento=="text":
-                            valor=input(f"Dime el valor {contador3} de esta tabla  : ")
+                            valor=input(f"Dime el valor de {listadatos[contador3]} en esta tabla : ")
                             print(separador)
                             valorfin=("'"+valor+"'")
                             listainsertar.append(valorfin)
@@ -62,7 +62,7 @@ def insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros):
                             cursor_mini.execute(final)
                             
                         elif elemento=="integer":
-                            valor=input(f"Dime el valor {contador3} de esta tabla  : ")
+                            valor=input(f"Dime el valor de {listadatos[contador3]} en esta tabla : ")
                             print(separador)
                             listainsertar.append(valor)
                             contador3=contador3+1

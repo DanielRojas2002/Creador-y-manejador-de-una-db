@@ -187,7 +187,7 @@ while opcion==1:
         print(separador)
         print("")
         print("-"*30 + "Bienvenido a los Registros :)" + "-"*30)
-        insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros)
+        insertar(nombrebase1,tabla,cuantos,contador3,separador,listatipo,registros,listadatos)
         
         print("1=SI\n2=NO")
         opcion=int(input("Deseas seguir ejecutando el codigo creador de Base de Datos ? : "))
